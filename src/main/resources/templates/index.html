@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http:/>/www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <tite></tite>
-</head>
-<body>
+<head th:replace="fragments :: head"></head>
+<body class="container">
 
     <h1>Coding Events</h1>
 
@@ -13,6 +10,8 @@
             <li><a href="/events">All Events</a></li>
         </ul>
     </nav>
+
+    <p th:replace="fragments :: address"></p>
 
 </body>
 </html>

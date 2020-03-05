@@ -14,14 +14,11 @@ public class EventController {
     public String displayAllEvents(Model model){
         events.put("StrangeLoop", "Multi-disciplinary conference.");
         events.put("Code Til Dawn", "Code until the sun comes up!");
-        events.put("Code with Price", "Support for LGBTQ coders.");
+        events.put("Code with Pride", "Support for LGBTQ coders.");
 
-//        List<String> events = new ArrayList<>();
-//        events.add("Code with Pride");
-//        events.add("Code till Dawn");
-//        events.add("Strange Loop");
-//
         model.addAttribute("events", events);
+        model.addAttribute("eventNames", events.keySet());
+        model.addAttribute("eventDescriptions", events.values());
 
         return"events/index";
     }
