@@ -17,7 +17,7 @@
         </thead>
 
         <tr th:each="event : ${events}">
-            <td th:text="${event}">Event</td>
+            <td th:text="${event.name}">Event</td>
         </tr>
     </table>
 
