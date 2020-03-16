@@ -17,6 +17,7 @@
                 <th>Location</th>
                 <th>Must Register</th>
                 <th>Number of Attendees</th>
+                <th>Maximum Cost</th>
                 <th>Edit Event</th>
             </tr>
         </thead>
@@ -28,7 +29,8 @@
             <td th:text="${event.contactEmail}">Contact Email</td>
             <td th:text="${event.location}">Location</td>
             <td th:text="${event.mustRegister}">Must Register</td>
-            <td th:text="${event.numberOfAttendees}">Must Register</td>
+            <td th:text="${event.numberOfAttendees}">Number of Attendees</td>
+            <td th:text="${event.maxCost}">Maximum Cost</td>
             <td><a th:href="@{/events/edit/{id}(id=${event.id})}">Edit</a></td>
         </tr>
     </table>

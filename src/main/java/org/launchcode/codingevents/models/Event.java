@@ -29,7 +29,10 @@ public class Event {
     @Min(value = 1, message = "Number of attendees must be greater than zero!")
     private int numberOfAttendees;
 
-    public Event(String name, String description, String contactEmail, String location, boolean mustRegister, int numberOfAttendees) {
+    @Max(value = 200, message = "Value cannot exceed $200!")
+    private int maxCost;
+
+    public Event(String name, String description, String contactEmail, String location, boolean mustRegister, int numberOfAttendees, int maxCost) {
         this();
         this.name = name;
         this.description = description;
@@ -37,6 +40,7 @@ public class Event {
         this.location = location;
         this.mustRegister = mustRegister;
         this.numberOfAttendees = numberOfAttendees;
+        this.maxCost = maxCost;
     }
 
     public Event(){
@@ -94,6 +98,14 @@ public class Event {
 
     public void setNumberOfAttendees(int numberOfAttendees) {
         this.numberOfAttendees = numberOfAttendees;
+    }
+
+    public int getMaxCost() {
+        return maxCost;
+    }
+
+    public void setMaxCost(int maxCost) {
+        this.maxCost = maxCost;
     }
 
     @Override
