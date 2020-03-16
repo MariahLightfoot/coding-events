@@ -26,12 +26,15 @@ public class Event {
     @NotBlank(message="Location is required.")
     private String location;
 
-    public Event(String name, String description, String contactEmail, String location) {
+    private boolean mustRegister;
+
+    public Event(String name, String description, String contactEmail, String location, boolean mustRegister) {
         this();
         this.name = name;
         this.description = description;
         this.contactEmail = contactEmail;
         this.location = location;
+        this.mustRegister = mustRegister;
     }
 
     public Event(){
@@ -73,6 +76,14 @@ public class Event {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public boolean isMustRegister() {
+        return mustRegister;
+    }
+
+    public void setMustRegister(boolean mustRegister) {
+        this.mustRegister = mustRegister;
     }
 
     @Override

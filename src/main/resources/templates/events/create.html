@@ -35,6 +35,12 @@
         </div>
 
         <div class="form-group">
+            <label>Must Register
+                <input type="checkbox" th:field="${event.mustRegister}" class="form-control">
+            </label>
+        </div>
+
+        <div class="form-group">
             <input type="submit" value="Create Event" class="btn btn-success">
         </div>
     </form>
