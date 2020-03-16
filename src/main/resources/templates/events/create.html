@@ -43,7 +43,7 @@
 
         <div class="form-group">
             <label>Number of Attendees
-                <input th:field="${event.numberOfAttendees}" class="form-control">
+                <input th:field="${event.numberOfAttendees}" class="form-control" onfocus="this.value=''">
             </label>
             <p class="error" th:errors="${event.numberOfAttendees}"></p>
         </div>
