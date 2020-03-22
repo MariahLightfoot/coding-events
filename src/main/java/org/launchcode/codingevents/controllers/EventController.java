@@ -47,7 +47,7 @@ public class EventController {
             return "events/create";
         }
 
-        eventRepository.save((newEvent));
+        eventRepository.save(newEvent);
 
         return "redirect:";
     }
