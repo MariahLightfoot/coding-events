@@ -10,15 +10,15 @@ public class EventCategory {
     @Id
     @GeneratedValue
     private int id;
-    private String name;
 
-    public EventCategory(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    private String name;
 
     public EventCategory(){
 
+    }
+
+    public EventCategory(String name) {
+        this.name = name;
     }
 
     public int getId() {
